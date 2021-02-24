@@ -6,7 +6,6 @@ bokeh==2.2.3
 certifi==2019.11.28
 chardet==3.0.4
 Click==7.0
-cloud-init==20.2
 cloudpickle==1.6.0
 colorama==0.4.3
 colorcet==2.0.6
