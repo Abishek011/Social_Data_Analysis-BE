@@ -21,6 +21,12 @@ var cjson = require('csvtojson');
 
 const port = process.env.PORT || 3000;
 
+app.get('/',(req,res)=>{
+    res.status(201);
+    res.send({message:'Initialized'});
+    res.end();
+})
+
 app.get('/search/:key/:count', async (req, res) => {
 
     let runPy = new Promise(async function (resolve, reject) {
