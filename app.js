@@ -108,7 +108,7 @@ app.get("/getResult",async (req,res) =>{
             res.send({data:jsonArrayObj}); 
    }).catch(err=>{
        res.status(409)
-       res.send({message:"Error during parsing..."})
+       res.send({message:"Error during parsing...",Error:err})
    })
 });
 
