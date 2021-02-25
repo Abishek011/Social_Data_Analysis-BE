@@ -102,7 +102,7 @@ app.get('/analyse', async (req, res) => {
 });
 
 app.get("/getResult",async (req,res) =>{
-    cjson().fromFile('./pyFiles/dataset2.csv')
+    cjson().fromFile('dataset2.csv')
         .then( (jsonArrayObj) =>{ //when parse finished, result will be emitted here.
             console.log(jsonArrayObj);
             res.send({data:jsonArrayObj}); 

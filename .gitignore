@@ -1,3 +1,5 @@
 package-lock.json
 node_modules
 .env
+dataset2.csv
+/pyFiles/dataset.csv
