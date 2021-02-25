@@ -106,9 +106,12 @@ app.get("/getResult",async (req,res) =>{
         .then( (jsonArrayObj) =>{ //when parse finished, result will be emitted here.
             console.log(jsonArrayObj);
             res.send({data:jsonArrayObj}); 
+            res.end();
    }).catch(err=>{
+       console.log("parser error",err);
        res.status(409)
        res.send({message:"Error during parsing...",Error:err})
+       res.end();
    })
 });
 
