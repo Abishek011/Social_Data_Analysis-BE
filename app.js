@@ -27,7 +27,7 @@ app.get('/',(req,res)=>{
     res.end();
 })
 
-app.get('/search/:key', async (req, res) => {
+app.get('/search/:key/:count', async (req, res) => {
 
     let runPy = new Promise(async function (resolve, reject) {
 
