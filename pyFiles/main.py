@@ -25,7 +25,7 @@ api = tweepy.API(auth)
 search_tweet = inp[0]
     
 t = []
-tweets = api.search(search_tweet, tweet_mode='extended')
+tweets = api.search(search_tweet,count=20 tweet_mode='extended')
 for tweet in tweets:
     polarity = TextBlob(tweet.full_text).sentiment.polarity
     subjectivity = TextBlob(tweet.full_text).sentiment.subjectivity
