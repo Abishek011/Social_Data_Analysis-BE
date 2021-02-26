@@ -30,12 +30,12 @@ tweets = api.search(search_tweet,count=count, tweet_mode='extended')
 for tweet in tweets:
     polarity = TextBlob(tweet.full_text).sentiment.polarity
     subjectivity = TextBlob(tweet.full_text).sentiment.subjectivity
-    t.append([tweet.created_at,tweet.full_text,tweet.user.id,tweet.user.location,polarity,subjectivity])
+    t.append([tweet.created_at,tweet.full_text,tweet.user.id,twitter.user.name,tweet.user.location,polarity,subjectivity])
     
 
-    
+print(tweets)
 filename = 'pyFiles/dataset.csv'
-testfields = ['created_at','full_text','user','location','polarity','subjectivity']
+testfields = ['created_at','full_text','user','user_name','location','polarity','subjectivity']
 
 with open(filename, 'w') as csvfile:  
         # creating a csv writer object  
